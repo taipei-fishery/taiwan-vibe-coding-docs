@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>薪資設定手冊 — Taiwan Payroll for BC</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <header>
+    <a href="../index.html">Taiwan Vibe Coding</a>
+    <nav>
+      <a href="../getting-started.html">入門指南</a>
+      <a href="payroll.html">薪資設定</a>
+      <a href="payroll-operations.html">薪資操作</a>
+      <a href="einvoice.html">發票設定</a>
+      <a href="einvoice-operations.html">發票操作</a>
+      <a href="../privacy.html">隱私權</a>
+      <a href="../eula.html">EULA</a>
+    </nav>
+  </header>
+  <main>
+    <h1>TW Payroll Setup（薪資設定）</h1>
+    <p class="meta">Taiwan Payroll for BC · Page <strong>50230</strong> · 對象：人資、會計</p>
+
+    <h2>開啟頁面</h2>
+    <p>於 Business Central 搜尋列輸入 <strong>薪資設定</strong> 或 <code>TW Payroll Setup</code>。</p>
+
+    <h2>科目對應</h2>
+    <table>
+      <thead><tr><th>欄位</th><th>建議科目</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>Salary Expense Account</td><td>6100</td><td>薪資費用</td></tr>
+        <tr><td>Accrued Salaries Account</td><td>2130</td><td>應付薪資</td></tr>
+        <tr><td>Labor Insurance Account</td><td>6120</td><td>勞保費</td></tr>
+        <tr><td>Health Insurance Account</td><td>6120</td><td>健保費</td></tr>
+        <tr><td>Pension Account</td><td>2130</td><td>勞退提撥</td></tr>
+      </tbody>
+    </table>
+    <p>科目需已存在於 G/L Account；示範資料僅在科目存在時寫入。</p>
+
+    <h2>台灣法規欄位</h2>
+    <table>
+      <thead><tr><th>欄位</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>Effective Bracket Year</td><td>目前適用勞健保級距年度</td></tr>
+        <tr><td>Physio Leave Exempt Days</td><td>生理假前 N 日不併入病假</td></tr>
+        <tr><td>Night Shift Cutoff Hour</td><td>跨夜班歸屬日 cutoff（小時）</td></tr>
+      </tbody>
+    </table>
+
+    <h2>可選 ISV 介接</h2>
+    <p>於 <strong>Payroll ISV Endpoint URL</strong> 填入外部薪資引擎 HTTPS 端點；空白時使用延伸模組內建試算邏輯。</p>
+
+    <h2>建置檢查</h2>
+    <ul>
+      <li>五個 G/L 科目已建立並填入</li>
+      <li>GENERAL 日記帳範本下有可用 Batch</li>
+      <li>Effective Bracket Year 與勞健保級距年度一致</li>
+      <li>員工卡片已設定投保金額並套用級距</li>
+    </ul>
+    <p>權限集：<strong>TW Payroll Admin</strong>（管理）、<strong>TW HR User</strong>（員工自助）。</p>
+    <p>下一步：<a href="payroll-operations.html">薪資操作手冊</a> · <a href="../getting-started.html">入門指南</a></p>
+  </main>
+  <footer>© Taiwan Vibe Coding</footer>
+</body>
+</html>

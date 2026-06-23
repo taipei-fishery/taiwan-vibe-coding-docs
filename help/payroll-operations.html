@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>薪資操作手冊 — Taiwan Payroll for BC</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <header>
+    <a href="../index.html">Taiwan Vibe Coding</a>
+    <nav>
+      <a href="../getting-started.html">入門指南</a>
+      <a href="payroll.html">薪資設定</a>
+      <a href="payroll-operations.html">薪資操作</a>
+      <a href="einvoice.html">發票設定</a>
+      <a href="einvoice-operations.html">發票操作</a>
+      <a href="../privacy.html">隱私權</a>
+      <a href="../eula.html">EULA</a>
+    </nav>
+  </header>
+  <main>
+    <h1>薪資操作手冊</h1>
+    <p class="meta">Taiwan Payroll for BC · 對象：人資、會計 · 前置：<a href="../getting-started.html">入門指南</a>、<a href="payroll.html">薪資設定</a></p>
+
+    <h2>一、常用頁面</h2>
+    <table>
+      <thead><tr><th>功能</th><th>搜尋關鍵字</th></tr></thead>
+      <tbody>
+        <tr><td>薪資設定</td><td>薪資設定 / TW Payroll Setup</td></tr>
+        <tr><td>勞健保級距</td><td>勞健保級距</td></tr>
+        <tr><td>假別</td><td>假別 / TW Leave Types</td></tr>
+        <tr><td>請假單</td><td>請假單 / TW Leave Requests</td></tr>
+        <tr><td>加班申請</td><td>加班申請 / TW Overtime Requests</td></tr>
+        <tr><td>薪資期別</td><td>薪資期別 / TW Payroll Periods</td></tr>
+        <tr><td>薪資試算</td><td>薪資試算 / TW Payroll Runs</td></tr>
+        <tr><td>員工（台灣欄位）</td><td>Employees → 台灣薪資群組</td></tr>
+      </tbody>
+    </table>
+
+    <h2>二、員工主檔</h2>
+    <ol>
+      <li>開啟<strong>員工</strong>卡片。</li>
+      <li>於 <strong>台灣薪資</strong> 群組填寫：身分證、投保金額、本薪、班別、級距年度等。</li>
+      <li>執行 <strong>套用勞健保級距</strong>，依投保金額對應當年度級距。</li>
+    </ol>
+
+    <h2>三、假勤（選用）</h2>
+    <h3>假別</h3>
+    <p>於假別維護特休、病假、生理假等；可設定年度上限、是否併入病假等規則。</p>
+    <h3>請假流程</h3>
+    <pre>新增請假單（草稿）→ 填員工、假別、起迄 → 送審 → 核准（或駁回）</pre>
+    <p>生理假依薪資設定之「生理假不併入病假天數」自動判斷是否併入病假額度。</p>
+    <h3>加班</h3>
+    <p>於<strong>加班申請</strong>建立單據，核准後可供薪資試算參考（依貴司設定與 ISV 端點）。</p>
+
+    <h2>四、薪資試算與過帳</h2>
+    <ol>
+      <li><strong>薪資期別</strong>：開啟目標月份期別（例如 2026-06）。</li>
+      <li><strong>薪資試算</strong>：新增試算批次 → <strong>建議員工</strong>（或手動加明細）→ <strong>計算</strong>。</li>
+      <li>檢視明細：本薪、加班、勞健保扣繳、實發等。</li>
+      <li><strong>過帳</strong>：確認無誤後過帳至 General Journal（依薪資設定之科目與日記帳批次）。</li>
+    </ol>
+    <p>若已設定 <strong>Payroll ISV Endpoint</strong>，計算步驟可能改由外部引擎回傳結果；Endpoint 空白時使用延伸模組內建邏輯。</p>
+
+    <h2>五、打卡匯入（選用）</h2>
+    <p>支援打卡資料匯入與跨夜班歸屬日（依薪資設定之 Night Shift Cutoff Hour）。詳細匯入格式請洽實施顧問或 API 文件。</p>
+
+    <h2>六、建置檢查</h2>
+    <ul>
+      <li>薪資設定五科目與日記帳批次已填</li>
+      <li>級距年度與勞健保級距表一致</li>
+      <li>員工已套用級距</li>
+      <li>試算批次可計算且過帳成功</li>
+    </ul>
+
+    <h2>七、相關文件</h2>
+    <ul>
+      <li><a href="../getting-started.html">入門指南</a></li>
+      <li><a href="payroll.html">薪資設定手冊</a></li>
+    </ul>
+  </main>
+  <footer>© Taiwan Vibe Coding</footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>電子發票操作手冊 — Taiwan E-Invoice for BC</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <header>
+    <a href="../index.html">Taiwan Vibe Coding</a>
+    <nav>
+      <a href="../getting-started.html">入門指南</a>
+      <a href="payroll.html">薪資設定</a>
+      <a href="payroll-operations.html">薪資操作</a>
+      <a href="einvoice.html">發票設定</a>
+      <a href="einvoice-operations.html">發票操作</a>
+      <a href="../privacy.html">隱私權</a>
+      <a href="../eula.html">EULA</a>
+    </nav>
+  </header>
+  <main>
+    <h1>電子發票操作手冊</h1>
+    <p class="meta">Taiwan E-Invoice for BC · 對象：會計、資訊 · 前置：<a href="../getting-started.html">入門指南</a>、<a href="einvoice.html">電子發票設定</a></p>
+
+    <h2>一、常用頁面</h2>
+    <table>
+      <thead><tr><th>功能</th><th>搜尋關鍵字</th></tr></thead>
+      <tbody>
+        <tr><td>電子發票設定</td><td>電子發票設定 / TW E-Invoice Setup</td></tr>
+        <tr><td>上傳紀錄</td><td>電子發票上傳紀錄 / TW E-Invoice Log</td></tr>
+        <tr><td>銷售發票</td><td>Sales Invoices（標準 BC）</td></tr>
+        <tr><td>已過帳銷售發票</td><td>Posted Sales Invoices</td></tr>
+      </tbody>
+    </table>
+
+    <h2>二、日常流程概覽</h2>
+    <pre>建立銷售發票 → 填寫客戶與品項 → 過帳
+    → 自動建立 E-Invoice Log（狀態 Pending）
+    → 若已啟用 ISV：HTTP 上傳 → Uploaded（含發票號碼等）
+    → 否則維持 Pending，待手動或後續整合處理</pre>
+
+    <h2>三、開立與過帳銷售發票</h2>
+    <ol>
+      <li>依標準 BC 流程建立<strong>銷售發票</strong>。</li>
+      <li>確認客戶、統編、品項與金額；B2B／B2C 相關欄位依貴司規則填寫（含 Your Reference 等，若已設定）。</li>
+      <li><strong>過帳</strong>發票。</li>
+      <li>延伸模組於背景建立<strong>電子發票上傳紀錄</strong>一筆。</li>
+    </ol>
+
+    <h2>四、查看上傳紀錄</h2>
+    <ol>
+      <li>搜尋 <strong>電子發票上傳紀錄</strong>。</li>
+      <li>依過帳日期、狀態（Pending / Uploaded / Error 等）篩選。</li>
+      <li>點選單筆查看關聯過帳發票、錯誤訊息、ISV 回傳之電子發票號碼（若有）。</li>
+    </ol>
+
+    <h2>五、啟用 ISV 上傳（Production）</h2>
+    <ol>
+      <li>於<strong>電子發票設定</strong>將 <strong>啟用 ISV 介接</strong> 設為開啟。</li>
+      <li>填入合作加值中心或自建閘道之 <strong>HTTPS Endpoint URL</strong> 與 <strong>API Key</strong>（若需要）。</li>
+      <li>（選用）開啟<strong>過帳後自動排程上傳</strong>。</li>
+      <li>測試過帳一張發票，確認 Log 狀態由 Pending 變為 Uploaded；失敗時檢查 Endpoint 與憑證。</li>
+    </ol>
+    <p><strong>重要</strong>：本延伸模組提供 BC 內管線與 ISV 呼叫介面；與財政部／加值中心之正式連線須由 ISV 服務方提供並符合當時法規。</p>
+
+    <h2>六、僅使用 BC 內 Log（未接 ISV）</h2>
+    <p>可將 ISV Integration 維持關閉，先驗證發票過帳與 Log 建立；待 ISV 就緒後再啟用上傳。適合 Sandbox 或分階段上線。</p>
+
+    <h2>七、建置檢查</h2>
+    <ul>
+      <li>公司統編、字軌前綴已設定</li>
+      <li>TW E-Invoice Admin 已指派給會計／資訊人員</li>
+      <li>測試過帳後 Log 有資料</li>
+      <li>（若啟用 ISV）Endpoint 可連線且 Log 狀態正常</li>
+    </ul>
+
+    <h2>八、相關文件</h2>
+    <ul>
+      <li><a href="../getting-started.html">入門指南</a></li>
+      <li><a href="einvoice.html">電子發票設定手冊</a></li>
+    </ul>
+  </main>
+  <footer>© Taiwan Vibe Coding</footer>
+</body>
+</html>

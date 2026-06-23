@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>入門指南 — 從 AppSource 取得、安裝與使用</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html">Taiwan Vibe Coding</a>
+    <nav>
+      <a href="getting-started.html">入門指南</a>
+      <a href="help/payroll.html">薪資設定</a>
+      <a href="help/payroll-operations.html">薪資操作</a>
+      <a href="help/einvoice.html">發票設定</a>
+      <a href="help/einvoice-operations.html">發票操作</a>
+      <a href="privacy.html">隱私權</a>
+      <a href="eula.html">EULA</a>
+    </nav>
+  </header>
+  <main>
+    <h1>入門指南</h1>
+    <p class="meta">適用：<strong>Taiwan Payroll for BC</strong>、<strong>Taiwan E-Invoice for BC</strong> · 繁體中文</p>
+
+    <p>兩個延伸模組<strong>彼此獨立</strong>，可只安裝薪資或只安裝電子發票。以下說明從 Microsoft AppSource 取得至首次可用的步驟。</p>
+
+    <h2>一、前置需求</h2>
+    <ul>
+      <li>已訂閱 <strong>Microsoft Dynamics 365 Business Central</strong>（SaaS 線上環境）</li>
+      <li>具備 BC <strong>管理員</strong>或 <strong>IT 管理</strong>權限（安裝延伸模組、指派權限集）</li>
+      <li>（選用）若需 API 整合，需能在 Microsoft Entra 管理應用程式權限</li>
+    </ul>
+
+    <h2>二、從 AppSource 取得</h2>
+    <ol>
+      <li>開啟 <a href="https://appsource.microsoft.com/" rel="noopener">Microsoft AppSource</a> 或 Business Central 管理中心的延伸模組市集。</li>
+      <li>搜尋 <strong>Taiwan Payroll for BC</strong> 或 <strong>Taiwan E-Invoice for BC</strong>（發行人：<strong>Taiwan Vibe Coding</strong>）。</li>
+      <li>選擇<strong>免費試用</strong>或<strong>購買</strong>（依 listing 定價）。</li>
+      <li>依精靈選擇要部署的 <strong>BC 環境</strong>（例如 Production 或 Sandbox）與<strong>公司</strong>。</li>
+      <li>完成部署後，Microsoft 會將延伸模組安裝至該環境（通常數分鐘內完成）。</li>
+    </ol>
+    <p><strong>注意</strong>：產品正式上架 AppSource 前，僅能透過合作夥伴或測試環境手動發佈；一般客戶請待 listing 上線後再從 AppSource 取得。</p>
+
+    <h2>三、確認安裝</h2>
+    <ol>
+      <li>登入 Business Central。</li>
+      <li>搜尋 <strong>Extension Management</strong>（延伸模組管理）。</li>
+      <li>確認列表中有 <strong>Taiwan Payroll for BC</strong> 和／或 <strong>Taiwan E-Invoice for BC</strong>，狀態為已安裝且版本符合預期。</li>
+    </ol>
+
+    <h2>四、指派權限</h2>
+    <p>安裝後須將權限集指派給使用者，否則無法開啟設定頁或 API。</p>
+    <table>
+      <thead><tr><th>延伸模組</th><th>權限集</th><th>典型角色</th></tr></thead>
+      <tbody>
+        <tr><td>Taiwan Payroll for BC</td><td><strong>TW Payroll Admin</strong></td><td>人資、薪資、系統管理員</td></tr>
+        <tr><td>Taiwan Payroll for BC</td><td><strong>TW HR User</strong></td><td>員工自助請假（若啟用整合）</td></tr>
+        <tr><td>Taiwan E-Invoice for BC</td><td><strong>TW E-Invoice Admin</strong></td><td>會計、資訊、系統管理員</td></tr>
+      </tbody>
+    </table>
+    <p><strong>BC 內指派</strong>：使用者卡片 → 權限集 → 加入上述權限集。</p>
+    <p><strong>API／Entra 整合</strong>（Production 常見）：Microsoft Entra admin center → 應用程式 → 您的 BC 應用 → <strong>Permission Sets</strong> → 勾選對應 TW 權限集。</p>
+
+    <h2>五、首次設定（依已安裝產品）</h2>
+
+    <h3>若已安裝 Taiwan Payroll for BC</h3>
+    <ol>
+      <li>搜尋 <strong>薪資設定</strong>（<code>TW Payroll Setup</code>）→ 填入 G/L 科目、級距年度、日記帳批次。詳見 <a href="help/payroll.html">薪資設定手冊</a>。</li>
+      <li>於<strong>員工</strong>卡片填寫台灣薪資欄位（身分證、投保金額、本薪、班別等）→ 可執行「套用勞健保級距」。</li>
+      <li>維護<strong>勞健保級距</strong>、<strong>假別</strong>（若使用假勤）。</li>
+      <li>日常試算與過帳見 <a href="help/payroll-operations.html">薪資操作手冊</a>。</li>
+    </ol>
+
+    <h3>若已安裝 Taiwan E-Invoice for BC</h3>
+    <ol>
+      <li>搜尋 <strong>電子發票設定</strong>（<code>TW E-Invoice Setup</code>）→ 填入公司統編、字軌等。詳見 <a href="help/einvoice.html">電子發票設定手冊</a>。</li>
+      <li>（選用）啟用 <strong>ISV 介接</strong> 並填入 HTTPS Endpoint 與 API Key。</li>
+      <li>過帳銷售發票後於 <strong>電子發票上傳紀錄</strong> 查看狀態。詳見 <a href="help/einvoice-operations.html">電子發票操作手冊</a>。</li>
+    </ol>
+
+    <h2>六、可選 ISV 服務</h2>
+    <p>兩個延伸模組均可<strong>單獨運作基本功能</strong>；進階薪資計算或正式上傳財政部／加值中心時，可選接客戶自建或合作夥伴的 <strong>HTTPS ISV 端點</strong>。ISV 服務之可用性、法遵與費用由該服務提供方負責，不包含在 AppSource 延伸模組授權內。</p>
+
+    <h2>七、常見問題</h2>
+    <table>
+      <thead><tr><th>問題</th><th>處理方式</th></tr></thead>
+      <tbody>
+        <tr><td>搜尋不到「薪資設定」</td><td>確認延伸模組已安裝，且使用者具 TW Payroll Admin</td></tr>
+        <tr><td>Custom API 403</td><td>Entra 應用程式是否已指派對應 Permission Set</td></tr>
+        <tr><td>過帳後發票 Log 一直 Pending</td><td>於電子發票設定啟用 ISV 介接並確認 Endpoint 可連線</td></tr>
+        <tr><td>薪資與發票都要裝嗎？</td><td>不需要，兩者獨立訂閱與安裝</td></tr>
+      </tbody>
+    </table>
+
+    <h2>八、下一步</h2>
+    <ul>
+      <li><a href="help/payroll.html">薪資設定手冊</a> · <a href="help/payroll-operations.html">薪資操作手冊</a></li>
+      <li><a href="help/einvoice.html">電子發票設定手冊</a> · <a href="help/einvoice-operations.html">電子發票操作手冊</a></li>
+      <li><a href="privacy.html">隱私權</a> · <a href="eula.html">EULA</a></li>
+    </ul>
+    <p>技術支援請見 AppSource 產品 listing 所列聯絡方式。</p>
+  </main>
+  <footer>© Taiwan Vibe Coding · 最後更新 2026-06-23</footer>
+</body>
+</html>
