@@ -13,7 +13,14 @@
 ./scripts/sync_appsource_docs.sh
 ```
 
-腳本會將 `docs-site/`（含 Pages workflow）推送到 `taiwan-vibe-coding-docs`。
+腳本會將 `docs-site/`（含截圖與 Pages workflow）推送到 `taiwan-vibe-coding-docs`。重拍 Partner Center 截圖後執行本腳本即可同步至公開手冊。
+
+## 截圖
+
+| 路徑 | 用途 |
+|------|------|
+| `assets/screenshots/p2/` | 薪資設定、試算、級距（來自 `products/tw-payroll-bc/media/`） |
+| `assets/screenshots/p4/` | 發票設定、Log、銷售發票列表 |
 
 ## app.json 對應 URL
 
