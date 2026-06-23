@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>訂閱方案 — Taiwan Vibe Coding</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html">Taiwan Vibe Coding</a>
+    <nav>
+      <a href="pricing.html">訂閱方案</a>
+      <a href="getting-started.html">入門指南</a>
+      <a href="help/payroll.html">薪資設定</a>
+      <a href="help/einvoice.html">發票設定</a>
+      <a href="privacy.html">隱私權</a>
+      <a href="eula.html">EULA</a>
+    </nav>
+  </header>
+  <main>
+    <h1>訂閱方案</h1>
+    <p class="meta">Microsoft Dynamics 365 Business Central · 台灣在地化 · 產品訂閱</p>
+
+    <p>我們採<strong>兩層訂閱</strong>：在 <strong>AppSource</strong> 訂閱 BC 延伸模組；需要進階薪資試算或真實電子發票上傳時，可另訂閱<strong>雲端 API</strong>（或自建 Bridge）。</p>
+
+    <h2>Layer 1 — Business Central 延伸模組（AppSource）</h2>
+    <p>金流與試用由 Microsoft 處理。各產品<strong>獨立訂閱</strong>，30 天試用，按<strong>公司（租戶）</strong>計費。</p>
+    <table>
+      <thead>
+        <tr><th>產品</th><th>說明</th><th>月費 (USD)</th><th>年費 (USD)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Taiwan Payroll for BC</strong></td>
+          <td>薪資主檔、假勤、級距、試算、G/L 過帳；內建試算</td>
+          <td>99</td>
+          <td>1,069</td>
+        </tr>
+        <tr>
+          <td><strong>Taiwan E-Invoice for BC</strong></td>
+          <td>發票欄位、設定、上傳 Log、ISV 管線</td>
+          <td>79</td>
+          <td>853</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>安裝步驟見 <a href="getting-started.html">入門指南</a>。上架後於 <a href="https://appsource.microsoft.com/" rel="noopener">Microsoft AppSource</a> 搜尋發行人 <strong>Taiwan Vibe Coding</strong>。</p>
+
+    <h2>Layer 2 — 雲端 API（Taiwan Vibe Coding 直售）</h2>
+    <p>需已安裝對應 BC 延伸模組。於 BC Setup 填入我們提供的 HTTPS Endpoint 與 API Key。</p>
+    <table>
+      <thead>
+        <tr><th>服務</th><th>搭配 BC 模組</th><th>月費 (USD)</th><th>試用</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Payroll Engine API</strong></td>
+          <td>Taiwan Payroll for BC</td>
+          <td>49</td>
+          <td>14 天</td>
+        </tr>
+        <tr>
+          <td><strong>E-Invoice Gateway API</strong> <em>(Preview)</em></td>
+          <td>Taiwan E-Invoice for BC</td>
+          <td>99</td>
+          <td>14 天</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><em>Preview</em>：Gateway 適用測試與整合驗證；正式加值中心連線上線前，請勿視為生產 SLA。</p>
+
+    <h2>套裝優惠（雲端部分）</h2>
+    <ul>
+      <li><strong>Payroll Complete</strong>：已訂閱 Payroll for BC + Engine API → 雲端月費 <strong>USD 39</strong></li>
+      <li><strong>E-Invoice Complete</strong>：已訂閱 E-Invoice for BC + Gateway API → 雲端月費 <strong>USD 79</strong></li>
+      <li><strong>Taiwan Suite</strong>：四項皆備 → 雲端合計 <strong>USD 118/月</strong>（Engine + Gateway）</li>
+    </ul>
+
+    <h2>如何訂閱雲端 API</h2>
+    <ol>
+      <li>確認已安裝（或試用）對應的 AppSource 延伸模組。</li>
+      <li>來信 <strong><a href="mailto:support@vibe-coding.tw">support@vibe-coding.tw</a></strong>，主旨：<code>訂閱 P1 或 P3 — 公司名稱 — BC Tenant ID</code>。</li>
+      <li>我們寄送 API Key、Endpoint URL 與 BC 設定說明。</li>
+      <li>完成一筆試算或測試上傳後開始計費（試用期滿後）。</li>
+    </ol>
+
+    <h2>常見問題</h2>
+    <table>
+      <thead><tr><th>問題</th><th>回答</th></tr></thead>
+      <tbody>
+        <tr><td>一定要買雲端 API 嗎？</td><td>不必。P2 可不接 Endpoint 使用內建試算；P4 可僅用 Log 管線。</td></tr>
+        <tr><td>可以自建 Bridge 嗎？</td><td>可以。依公開 ISV 契約實作 HTTPS 端點，無需訂閱我們的雲端服務。</td></tr>
+        <tr><td>薪資和發票要一起買嗎？</td><td>不必。AppSource 上為兩個獨立訂閱。</td></tr>
+        <tr><td>幣別？</td><td>AppSource 以 Microsoft 顯示為準（多為 USD）；直售雲端 API 合約可另開 TWD 發票。</td></tr>
+      </tbody>
+    </table>
+
+    <p>技術支援：<strong>support@vibe-coding.tw</strong></p>
+  </main>
+  <footer>© Taiwan Vibe Coding · 最後更新 2026-06-23</footer>
+</body>
+</html>
