@@ -45,25 +45,25 @@
         </tr>
       </tbody>
     </table>
-    <p>安裝步驟見 <a href="getting-started.html">入門指南</a>。上架後於 <a href="https://appsource.microsoft.com/" rel="noopener">Microsoft AppSource</a> 搜尋發行人 <strong>Taiwan Vibe Coding</strong>。</p>
+    <p>安裝步驟見 <a href="getting-started.html">入門指南</a>。於 <a href="https://appsource.microsoft.com/" rel="noopener">Microsoft AppSource</a> 搜尋發行人 <strong>Taiwan Vibe Coding</strong>（上架審核中時請來信索取試用指引）。</p>
 
     <h2>Layer 2 — 雲端 API（Taiwan Vibe Coding 直售）</h2>
-    <p>需已安裝對應 BC 延伸模組。於 BC Setup 填入我們提供的 HTTPS Endpoint 與 API Key。</p>
+    <p>需已安裝對應 BC 延伸模組。於 BC Setup 填入我們提供的 HTTPS Endpoint 與 API Key。台灣客戶以<strong>新台幣</strong>計價、可開立 B2B 發票。</p>
     <table>
       <thead>
-        <tr><th>服務</th><th>搭配 BC 模組</th><th>月費 (USD)</th><th>試用</th></tr>
+        <tr><th>服務</th><th>搭配 BC 模組</th><th>月費</th><th>試用</th></tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>Payroll Engine API</strong></td>
           <td>Taiwan Payroll for BC</td>
-          <td>49</td>
+          <td>NT$ 1,590（USD 49）</td>
           <td>14 天</td>
         </tr>
         <tr>
           <td><strong>E-Invoice Gateway API</strong> <em>(Preview)</em></td>
           <td>Taiwan E-Invoice for BC</td>
-          <td>99</td>
+          <td>NT$ 3,190（USD 99）</td>
           <td>14 天</td>
         </tr>
       </tbody>
@@ -72,36 +72,51 @@
 
     <h2>套裝優惠（雲端部分）</h2>
     <ul>
-      <li><strong>Payroll Complete</strong>：已訂閱 Payroll for BC + Engine API → 雲端月費 <strong>USD 39</strong></li>
-      <li><strong>E-Invoice Complete</strong>：已訂閱 E-Invoice for BC + Gateway API → 雲端月費 <strong>USD 79</strong></li>
-      <li><strong>Taiwan Suite</strong>：四項皆備 → 雲端合計 <strong>USD 118/月</strong>（Engine + Gateway）</li>
+      <li><strong>Payroll Complete</strong>：已訂閱 Payroll for BC + Engine API → 雲端月費 <strong>NT$ 1,270</strong>（USD 39）</li>
+      <li><strong>E-Invoice Complete</strong>：已訂閱 E-Invoice for BC + Gateway API → 雲端月費 <strong>NT$ 2,550</strong>（USD 79）</li>
+      <li><strong>Taiwan Suite</strong>：四項皆備 → 雲端合計 <strong>NT$ 3,790/月</strong>（USD 118）</li>
     </ul>
+    <p>套裝折扣請於結帳前來信 <a href="mailto:support@vibe-coding.tw">support@vibe-coding.tw</a> 確認資格。</p>
 
     <h2>如何訂閱雲端 API</h2>
-    <h3>自助訂閱（Stripe）</h3>
-    <p>請先確認已安裝對應 AppSource 延伸模組。結帳時請填寫<strong>公司名稱</strong>與 <strong>BC Tenant ID</strong>；付款成功後系統會寄送 API Key 與 BC 設定說明（14 天試用）。</p>
+    <h3>自助訂閱（台灣 — 綠界 ECPay）</h3>
+    <p>請先確認已安裝對應 AppSource 延伸模組。結帳時請填寫<strong>公司名稱</strong>、<strong>統一編號</strong>、Email 與 <strong>BC Tenant ID</strong>；綁卡成功後系統寄送 API Key 與 BC 設定說明（14 天試用，試用結束後開始扣款）。</p>
     <table>
       <thead><tr><th>方案</th><th>訂閱</th></tr></thead>
       <tbody>
         <tr>
           <td>Payroll Engine API（月付）</td>
-          <td><a href="https://billing.vibe-coding.tw/v1/checkout/p1-monthly">Stripe 結帳</a></td>
+          <td><a href="https://billing.vibe-coding.tw/v1/checkout/p1-monthly">綠界結帳</a></td>
+        </tr>
+        <tr>
+          <td>Payroll Engine API（年付）</td>
+          <td><a href="https://billing.vibe-coding.tw/v1/checkout/p1-annual">綠界結帳</a></td>
         </tr>
         <tr>
           <td>E-Invoice Gateway API（月付）</td>
-          <td><a href="https://billing.vibe-coding.tw/v1/checkout/p3-monthly">Stripe 結帳</a></td>
+          <td><a href="https://billing.vibe-coding.tw/v1/checkout/p3-monthly">綠界結帳</a></td>
+        </tr>
+        <tr>
+          <td>E-Invoice Gateway API（年付）</td>
+          <td><a href="https://billing.vibe-coding.tw/v1/checkout/p3-annual">綠界結帳</a></td>
         </tr>
         <tr>
           <td>Taiwan Suite 雲端（月付）</td>
-          <td><a href="https://billing.vibe-coding.tw/v1/checkout/suite-monthly">Stripe 結帳</a></td>
+          <td><a href="https://billing.vibe-coding.tw/v1/checkout/suite-monthly">綠界結帳</a></td>
         </tr>
       </tbody>
     </table>
-    <p><em>若結帳連結尚未上線，請改寄信 <a href="mailto:support@vibe-coding.tw">support@vibe-coding.tw</a>。</em></p>
+    <h3>海外客戶（Stripe · USD）</h3>
+    <p>月付方案請在結帳網址加上 <code>?provider=stripe</code>，例如
+      <a href="https://billing.vibe-coding.tw/v1/checkout/p1-monthly?provider=stripe">Payroll Engine（Stripe）</a>。
+    </p>
+    <p><em>若結帳連結尚未上線，請改寄信 <a href="mailto:support@vibe-coding.tw">support@vibe-coding.tw</a>，我們人工開通。</em></p>
+
     <h3>人工訂閱</h3>
     <ol>
       <li>來信主旨：<code>訂閱 P1 或 P3 — 公司名稱 — BC Tenant ID</code>。</li>
-      <li>我們寄送 API Key 與設定說明（範本見 repo <code>docs/templates/onboarding/</code>）。</li>
+      <li>附上統一編號（台灣 B2B）與聯絡人。</li>
+      <li>我們寄送結帳連結或報價單，付款後寄 API Key 與設定說明。</li>
     </ol>
 
     <h2>常見問題</h2>
@@ -111,7 +126,7 @@
         <tr><td>一定要買雲端 API 嗎？</td><td>不必。P2 可不接 Endpoint 使用內建試算；P4 可僅用 Log 管線。</td></tr>
         <tr><td>可以自建 Bridge 嗎？</td><td>可以。依公開 ISV 契約實作 HTTPS 端點，無需訂閱我們的雲端服務。</td></tr>
         <tr><td>薪資和發票要一起買嗎？</td><td>不必。AppSource 上為兩個獨立訂閱。</td></tr>
-        <tr><td>幣別？</td><td>AppSource 以 Microsoft 顯示為準（多為 USD）；直售雲端 API 合約可另開 TWD 發票。</td></tr>
+        <tr><td>幣別與發票？</td><td>AppSource 以 Microsoft 顯示為準（多為 USD）。台灣直售雲端 API 以 TWD 計價，可開立 B2B 電子發票。</td></tr>
       </tbody>
     </table>
 
