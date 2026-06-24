@@ -2,7 +2,7 @@
 
 > **公開網址**：https://taipei-fishery.github.io/taiwan-vibe-coding-docs/  
 > **原始碼 repo**：`taipei-fishery/taiwan-vibe-coding-docs`（public）  
-> **編輯來源**：本 monorepo 的 `docs-site/`（private `taipei-seafood`）
+> **編輯來源**：本 monorepo 的 `docs-site/`（private [`taiwan-vibe-coding`](https://github.com/taipei-fishery/taiwan-vibe-coding)）
 
 主 monorepo 為 **private**，AppSource 法律／說明 URL 須指向此 **public** Pages 站，勿使用 `github.com/.../blob/main/...`。
 
